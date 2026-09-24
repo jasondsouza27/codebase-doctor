@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Codebase Doctor - PaymentService</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; padding: 2rem; }
+        .card { background: #1e293b; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #334155; }
+        h1, h2, h3 { color: #38bdf8; }
+        .badge { background: #ef4444; color: white; padding: 4px 10px; border-radius: 12px; font-weight: bold; }
+        .tree { background: #090d16; padding: 1rem; border-radius: 6px; font-family: monospace; color: #4ade80; }
+        ul { list-style-type: square; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 8px 12px; text-align: left; border-bottom: 1px solid #334155; }
+        th { background: #334155; color: #94a3b8; }
+        .pass { color: #4ade80; font-weight: bold; }
+        .fail { color: #f87171; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>AI Codebase Doctor Report</h1>
+    <div class="card">
+        <h2>Target: <code>payment_service.py</code> (PaymentService)</h2>
+        <p>Blast Radius Score: <span class="badge">52.0 / 100</span></p>
+    </div>
+
+    <div class="card">
+        <h3>Potentially Affected Components</h3>
+        <div class="tree">
+            <strong>PaymentService</strong><br>&nbsp;├── InvoiceService<br>&nbsp;├── NotificationService<br>&nbsp;├── OrderService<br>&nbsp;└── RefundService
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Risk Areas</h3>
+        <ul>
+            <li>Currency conversion</li><li>Refund calculation</li><li>Payment status synchronization</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Suggested Tests</h3>
+        <ul>
+            <li>✓ <code>test_refund_after_partial_payment</code></li><li>✓ <code>test_currency_conversion</code></li><li>✓ <code>test_failed_payment_retry</code></li><li>✓ <code>test_payment_status_sync</code></li><li>✓ <code>test_invoice_service_integration_with_paymentservice</code></li><li>✓ <code>test_notification_service_integration_with_paymentservice</code></li>
+        </ul>
+    </div>
+
+    
+            <div class="card">
+                <h3>Automated Test Results (6/6 Passed in 1.065s)</h3>
+                <table>
+                    <thead><tr><th>Test</th><th>Status</th><th>Details</th></tr></thead>
+                    <tbody><tr><td><code>test_refund_after_partial_payment</code></td><td class='pass'>PASS</td><td>OK</td></tr><tr><td><code>test_currency_conversion</code></td><td class='pass'>PASS</td><td>OK</td></tr><tr><td><code>test_failed_payment_retry</code></td><td class='pass'>PASS</td><td>OK</td></tr><tr><td><code>test_payment_status_sync</code></td><td class='pass'>PASS</td><td>OK</td></tr><tr><td><code>test_invoice_service_integration_with_paymentservice</code></td><td class='pass'>PASS</td><td>OK</td></tr><tr><td><code>test_notification_service_integration_with_paymentservice</code></td><td class='pass'>PASS</td><td>OK</td></tr></tbody>
+                </table>
+            </div>
+            
+</body>
+</html>

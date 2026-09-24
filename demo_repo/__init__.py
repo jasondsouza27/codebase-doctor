@@ -1,0 +1,1 @@
+"""Demo legacy repository package."""
